@@ -1,0 +1,333 @@
+
+cscuser@L01-HP20 MINGW64 ~
+$ cd D:
+
+cscuser@L01-HP20 MINGW64 /d
+$ ls
+'$RECYCLE.BIN'/   bbbb.jpg  'Packet Tracer 7.1.1 for Windows 64 bit.exe'*
+ 2017csc005/      cccc.jpg   projects/
+ 2017SP046/       dddd.jpg  'System Volume Information'/
+
+cscuser@L01-HP20 MINGW64 /d
+$ nkdir 2017CSC005
+bash: nkdir: command not found
+
+cscuser@L01-HP20 MINGW64 /d
+$ mkdir 2017CSC005
+mkdir: cannot create directory ‘2017CSC005’: File exists
+
+cscuser@L01-HP20 MINGW64 /d
+$ mkdir 2017CSC050
+
+cscuser@L01-HP20 MINGW64 /d
+$ cd 2017csc005
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005
+$ git init
+Initialized empty Git repository in D:/2017csc005/.git/
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ touch Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ ls
+git-cheat-sheet-education.pdf  Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Readme.txt
+        git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ git add Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git-cheat-sheet-education.pdf
+
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ git add *
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.txt
+        new file:   git-cheat-sheet-education.pdf
+
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ mkdir MyProject
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005 (master)
+$ cd MyProject/
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git touch Readme.txt
+git: 'touch' is not a git command. See 'git --help'.
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ touch Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ ls
+Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   ../Readme.txt
+        new file:   ../git-cheat-sheet-education.pdf
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ./
+
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git add Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.txt
+        new file:   ../Readme.txt
+        new file:   ../git-cheat-sheet-education.pdf
+
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ vi Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ vi Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.txt
+        new file:   ../Readme.txt
+        new file:   ../git-cheat-sheet-education.pdf
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Readme.txt
+
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git commit -m "first commit"
+[master (root-commit) 2ad042b] first commit
+ Committer: wazeem123 <cscuser@CSSAMBA.JFN.AC.LK>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 MyProject/Readme.txt
+ create mode 100644 Readme.txt
+ create mode 100644 git-cheat-sheet-education.pdf
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git add Readme.txt
+warning: LF will be replaced by CRLF in MyProject/Readme.txt.
+The file will have its original line endings in your working directory
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Readme.txt
+
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git diff
+warning: LF will be replaced by CRLF in MyProject/Readme.txt.
+The file will have its original line endings in your working directory
+diff --git a/MyProject/Readme.txt b/MyProject/Readme.txt
+index 1c8df43..6f125dc 100644
+--- a/MyProject/Readme.txt
++++ b/MyProject/Readme.txt
+@@ -1,2 +1,15 @@
+ Jatheesan
+ +++++++++
++
++Git Comments
++-=-=-=-=-=-=-
++
++git init - intializing git repository
++
++git status - indentify the status of the modifications
++
++git add - adding file/directory to for staging
++
++git commit - commit your task in the stage
++
++git diff - indicate the difference between the present and past modifications
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git diff
+warning: LF will be replaced by CRLF in MyProject/Readme.txt.
+The file will have its original line endings in your working directory
+diff --git a/MyProject/Readme.txt b/MyProject/Readme.txt
+index 1c8df43..22c3964 100644
+--- a/MyProject/Readme.txt
++++ b/MyProject/Readme.txt
+@@ -1,2 +1,12 @@
+-Jatheesan
+-+++++++++
++Git Comments
++-=-=-=-=-=-=-
++
++git init - intializing git repository
++
++git status - indentify the status of the modifications
++
++git add - adding file/directory to for staging
++
++git commit - commit your task in the stage
++
++git diff - indicate the difference between the present and past modifications
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git commit -m "git commands added"
+[master 865991d] git commands added
+ Committer: wazeem123 <cscuser@CSSAMBA.JFN.AC.LK>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git add Readme.txt
+warning: LF will be replaced by CRLF in MyProject/Readme.txt.
+The file will have its original line endings in your working directory
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Readme.txt
+
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ vi Readme.txt
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$ git diff
+warning: LF will be replaced by CRLF in MyProject/Readme.txt.
+The file will have its original line endings in your working directory
+diff --git a/MyProject/Readme.txt b/MyProject/Readme.txt
+index 22c3964..ac97d47 100644
+--- a/MyProject/Readme.txt
++++ b/MyProject/Readme.txt
+@@ -1,10 +1,8 @@
+ Git Comments
+--=-=-=-=-=-=-
++-=-=-=--=-=
+
+ git init - intializing git repository
+
+-git status - indentify the status of the modifications
+-
+ git add - adding file/directory to for staging
+
+ git commit - commit your task in the stage
+
+cscuser@L01-HP20 MINGW64 /d/2017csc005/MyProject (master)
+$

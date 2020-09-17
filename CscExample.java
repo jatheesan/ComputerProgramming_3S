@@ -36,7 +36,10 @@ public class CscExample
 	
 	public void addQuestion(CscExample que)
 	{
-		System.out.println("addQuestion");
+		this.questionNo = que.getQuestionNO();
+		this.categary = que.getCategary();
+		this.text = que.getText();
+		//System.out.println("addQuestion");
 	}
 	
 	public void removeQuestion(int quId)

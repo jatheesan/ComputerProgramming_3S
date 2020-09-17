@@ -30,16 +30,16 @@ public class CscExample
 	
 	public void addQuestion(CscExample que)
 	{
-		
+		System.out.println("addQuestion");
 	}
 	
 	public void removeQuestion(int quId)
 	{
-		
+		System.out.println("removeQuestion");
 	}
 	
 	public void editQuestion(int quId)
 	{
-		
+		System.out.println("editQuestion");
 	}
 }
